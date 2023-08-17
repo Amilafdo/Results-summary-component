@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+
+:root {
+    /*PRIMARY COLORs */
+    --BGCOLOR: #fff;
+    --FONT-COLOR: #fff;
+    --FONT-COLOR-COLUMN1: hsl(241, 100%, 89%);
+    --FONT-COLOR-COLUMN2: (0, 0%, 100%);
+    /* TAB COLORS */
+    --TBCOLOR-LIGHT-RED: hsl(0, 100%, 67%);
+    --TBCOLOR-ORANGE-YELLOW: hsl(39, 100%, 56%);
+    --TBCOLOR-GREEN-TEAL: hsl(166, 100%, 37%);
+    --TBCOLOR-COBALT-BLUE: hsl(234, 85%, 45%);
+
+    /* TAB BACKGROUND COLORS */
+    --BGCOLOR-LIGHT-RED: hsla(0, 100%, 67%, 0.1);
+    --BGCOLOR-ORANGE-YELLOW: hsl(39, 100%, 56%, 0.1);
+    --BGCOLOR-GREEN-TEAL: hsl(166, 100%, 37%, 0.1);
+    --BGCOLOR-COBALT-BLUE: hsl(234, 85%, 45%, 0.1);
+
+    /*COLUMN COLORS */
+    --BGGRADIENT-COLUMN1-COLOR-BLUE1: hsl(252, 100%, 67%);
+    --BGGRADIENT-COLUMN1-COLOR-BLUE2: hsl(241, 81%, 54%);
+    --BG-C2-COLOR: #fff;
+
+    /*CIRCLE COLORS */
+    --CIRCLE-GRADIENT-COLOR-BLUE1: hsla(256, 72%, 46%, 1);
+    --CIRCLE-GRADIENT-COLOR-BLUE2: hsla(241, 72%, 46%, 0);
+
+    /*COLUMN COLORS */
+    --BUTTON-COLOR: hsl(224, 30%, 27%);
+}
+
+/* ## Colors
+
+### Primary
+
+- Light red: hsl(0, 100%, 67%)
+- Orangey yellow: hsl(39, 100%, 56%)
+- Green teal: hsl(166, 100%, 37%)
+- Cobalt blue: hsl(234, 85%, 45%)
+
+## Gradients
+
+- Light slate blue (background): hsl(252, 100%, 67%)
+- Light royal blue (background): hsl(241, 81%, 54%)
+
+- Violet blue (circle): hsla(256, 72%, 46%, 1)
+- Persian blue (circle): hsla(241, 72%, 46%, 0)
+
+
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Pale blue: hsl(221, 100%, 96%)
+- Light lavender: hsl(241, 100%, 89%)
+- Dark gray blue: hsl(224, 30%, 27% */
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 16px;
+    color: var(--FONT-COLOR);
+    background-color: var(--BGCOLOR);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 1px);
+    margin: 40px;
+}
+
+.container {
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px hsl(221, 100%, 96%);
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+}
+
+
+
+/* Column 1 properties*/
+
+.container .column1 {
+    background-image: linear-gradient(to bottom, var(--BGGRADIENT-COLUMN1-COLOR-BLUE1), var(--BGGRADIENT-COLUMN1-COLOR-BLUE2));
+    border-radius: 20px;
+    text-align: center;
+    width: 45%;
+}
+
+.container .column1 h1 {
+    font-weight: bolder;
+    text-align: center;
+    line-height: 48px;
+}
+
+.container .column1 .circle {
+    background-image: linear-gradient(to bottom, var(--CIRCLE-GRADIENT-COLOR-BLUE1), var(--CIRCLE-GRADIENT-COLOR-BLUE2));
+    border-radius: 100px;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+
+.column1 .circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container .column1 .circle h1 {
+    font-size: 3rem;
+}
+
+.container .column1 .circle p {
+    margin: 1px;
+}
+
+.container .column1 h3 {
+    margin: 20px;
+    text-align: center;
+}
+
+.container .column1 p {
+    margin: 10px;
+    text-align: center;
+    color: var(--FONT-COLOR-COLUMN1);
+}
+
+.container .column1 h2 {
+    margin: 20px;
+    text-align: center;
+}
+
+
+/* Column 2 properties*/
+
+.container .column2 {
+    width: 52%;
+    font-weight: 800;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.container .column2 h3 {
+    margin-top: 20px;
+    margin-left: 20px;
+    color: var(--BUTTON-COLOR);
+}
+
+/* .column2 .tab1,
+.tab2,
+.tab3,
+.tab4 {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #000;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 0.5rem;
+} */
+
+.column2 .tab1{
+    color: var(--TBCOLOR-LIGHT-RED);
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--BGCOLOR-LIGHT-RED);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 0.6rem;
+}
+
+.column2 .tab2{
+    color: var(--TBCOLOR-ORANGE-YELLOW);
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--BGCOLOR-ORANGE-YELLOW);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 0.6rem;
+}
+
+.column2 .tab3{
+    color: var(--TBCOLOR-GREEN-TEAL);
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--BGCOLOR-GREEN-TEAL);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 0.6rem;
+}
+.column2 .tab4{
+    color: var(--TBCOLOR-COBALT-BLUE);
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--BGCOLOR-COBALT-BLUE);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 0.6rem;
+}
+
+.column2 .tab1 .row {
+    color: var(--TBCOLOR-LIGHT-RED);
+    font-weight: 800;
+}
+
+.column2 .tab2 .row {
+    color: var(--TBCOLOR-ORANGE-YELLOW);
+    font-weight: 800;
+}
+
+.column2 .tab3 .row {
+    color: var(--TBCOLOR-GREEN-TEAL);
+    font-weight: 800;
+}
+
+.column2 .tab4 .row {
+    color: var(--TBCOLOR-COBALT-BLUE);
+    font-weight: 800;
+}
+
+.column2 p {
+    color: var(--BUTTON-COLOR);
+    font-weight: 400;
+}
+
+.column2 .row {
+    display: flex;
+    gap: 10px;
+
+}
+
+.container .column2 .button {
+    border-radius: 30px;
+    background-color: var(--BUTTON-COLOR);
+    padding: 10px;
+    margin: 30px;
+}
+
+.container .column2 .button p {
+    text-align: center;
+    color: var(--FONT-COLOR);
+}
+
+.container .column2 .bold {
+    font-weight: 800;
+}
+
+.attribution {
+    color: #000;
+    flex-wrap: wrap;
+    font-size: 11px; 
+    text-align: center;
+    margin-top: 30px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
